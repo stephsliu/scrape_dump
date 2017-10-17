@@ -1,5 +1,4 @@
-"""VR scrape, Steam 1.9a"""
-#pylint: disable=locally-disabled, C0301, C0103, W0621, W0611, C0330, R0914, R0912, W0703
+"""VR scrape, Steam"""
 #Scrape all Steam filters (Relevance, Release Date, Name, Price, User Reviews)
 #Grab all hrefs by xpath, de-dup, scrape error links via selenium
 
@@ -240,17 +239,17 @@ GAME_LINKS = de_dup(middleman)
 print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n    Part 3: SCRAPE GO\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
 get_app_info(GAME_LINKS)
 
-'''print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n    Part 4: ERROR FIX\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
-selenium_get(ERRORLINKS)''' #Error links can be grabbed but is not recommended due to Selenium package being prone to crashes.
+print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n    Part 4: ERROR FIX\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+selenium_get(ERRORLINKS)
 
-print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n      Part 4: ERROR DUMP\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n      Part 5: ERROR DUMP\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
 name = datetime.today().strftime("%Y%m%d %H%M")
 with open('Steam error %s.csv' % name, 'w', encoding='utf8') as mycsvfile:
     DATAWRITE = csv.writer(mycsvfile, dialect='mydialect')
     for row in ERRORLINKS:
         DATAWRITE.writerow(row)
 
-print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n   Part 5: WRITING..!\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+print('\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n   Part 6: WRITING..!\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
 CSVOUTPUT = NONERROR + FIXED
 
 with open('Steam scrape %s.csv' % name, 'w', encoding='utf8') as mycsvfile:
