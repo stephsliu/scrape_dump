@@ -117,7 +117,6 @@ for companyID, companyName in zip(remainder, companies):
                 if i >= 3:
                     break
             #print('Loop done.')
-            break
     try:
         print(companyName, '|', employeecount, '|', engineering, '|', designers)
         CSVOUTPUT.append([companyName, employeecount, engineering, designers])
