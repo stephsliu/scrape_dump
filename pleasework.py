@@ -14,7 +14,6 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
-
 def depart():
     '''a function that closes the "Function" pill-box to allow something else to be inputted'''
     try:
