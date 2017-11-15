@@ -119,6 +119,7 @@ for companyID in remainder:
     except Exception:
         pass
 
+#writes CSVOUTPUT to .csv
 with open('LinkedIn_out %s.csv' %name, 'w', encoding='utf8') as mycsvfile:
     DATAWRITE = csv.writer(mycsvfile, dialect='mydialect')
     for row in CSVOUTPUT:
