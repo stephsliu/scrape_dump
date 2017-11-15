@@ -1,4 +1,5 @@
 ### Hi all, Stephen here. Will be adding changes incrementally. Just hmu with questions.
+### REMEMBER TO USE A VPN
 
 ### CHANGELOG
 ### v0.1.1 (11 15 17): 
