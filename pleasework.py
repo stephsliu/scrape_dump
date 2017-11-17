@@ -2,6 +2,8 @@
 ### REMEMBER TO USE A VPN
 
 ### CHANGELOG
+### v0.1.2 (11 17 17)
+### added sep='' to print, removing need to trim copy-pasted commandline prints to excel
 ### v0.1.1 (11 15 17): 
 ### removed need for LinkedIn_index.csv
 ### added datetime in output file name
