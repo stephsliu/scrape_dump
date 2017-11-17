@@ -113,7 +113,7 @@ for companyID in remainder:
                     break
             break
     try:
-        print(companyID, '|', employeecount, '|', engineering, '|', designers)
+        print(companyID, '|', employeecount, '|', engineering, '|', designers, sep='')
         CSVOUTPUT.append([companyID, employeecount, engineering, designers])
         #print(companyID, '|', employeecount, '|', qualityassurance)
         #CSVOUTPUT.append([companyID, employeecount, qualityassurance])
